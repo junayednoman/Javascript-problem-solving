@@ -74,3 +74,18 @@ const sortAscending = (arr) => {
 };
 
 sortAscending(cars);
+
+// 5.Task: Find and Modify
+// Write a function that searches an array of objects for a specific person by name. If found, modify their age property. Print the updated array.
+
+const searchPeopleAndModifyAge = (arr, name, age) => {
+  const foundItem = arr.find(
+    (item) => item.name.toLowerCase() === name.toLowerCase()
+  );
+  if (foundItem) {
+    foundItem.age = age;
+  }
+  console.log(foundItem);
+};
+
+searchPeopleAndModifyAge(people, "bOb", 55);
